@@ -18,6 +18,8 @@ cd
 cd /
 # 다시 기존의 폴더로 이동
 cd 폴더 경로(cd home/shinyujeong/yujeong_dir)
+# 이전에 명령을 수행하던 경로로 이동
+cd -
 # # 상위 폴더로 이동
 # cd ..
 # 비어있는 파일 만들기
