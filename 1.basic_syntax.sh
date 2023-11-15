@@ -8,6 +8,8 @@ ls -l
 ls -a
 # 현재 위치에서 파일, 폴더 목록 + 자세히 + 숨김 파일
 ls -al
+# 현재 위치에서 파일, 폴더 목록 + 자세히 + 숨김 파일 + 시간 순으로 정렬
+ls -alrt
 # 디렉토리 생성
 mkdir 폴더명 (mkdir yujeong_dir)
 # 특정 디렉토리 이동
@@ -36,6 +38,8 @@ echo "hello world" > first_file.txt
 # sort명령어와 함께 많이 사용
 sort < first_file.txt
 
+# |(pipeline) : 왼쪽 명령문의 결과값을 오른쪽 명령문의 입력값으로 사용
+
 # history 명령어를 통해 이전에 실행했던 명령어 조회
 history
 # 입력중인 명령창 정리
@@ -58,37 +62,3 @@ mv test_dir/ yujeong_dir/second_dir
 
 # head는 cat처럼 파일을 출력하는 것. 상위 n행 조회
 # tail은 하위 n행 조회
-
-
-
-
-<과제>
--터미널창에 "script practice1 start"문구 출력
--홈디렉토리에서 mydir이라는 폴더 생성
--mydir로 이동해서 file1.txt, file2.txt 파일 생성
--file1.txt에는 Hello from file1이라는 문구 입력
--file2.txt에는 Hello from file2이라는 문구 입력
--file1.txt파일을 어쩔지 모르니, copy본 하나 생성(file1_backup.txt)
--file2.txt파일은 이름을 file2_rename.txt로 변경
--터미널창에 "script practice1 complete"출력
-
-
-<과제 풀이>
-nano myscript2.sh
-
-
-echo "script practice1 start"
-cd
-mkdir mydir
-cd mydir
-touch "file1.txt"
-echo "Hello from file1" > file1.txt
-touch "file2.txt"
-echo "Hello from file2" > file2.txt
-cp file1.txt file1_backup.txt
-mv file2.txt file2_rename.txt
-echo "script practice1 complete"
-
-
-chmod 777 myscript2.sh
-./myscript2.sh
